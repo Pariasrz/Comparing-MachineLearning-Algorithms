@@ -1,17 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Feb  7 21:10:28 2021
-
-@author: Pariya
-"""
-
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 import pickle
-from final_data import X_train, X_test, Y_train, Y_test
+from prepared_data import X_train, X_test, Y_train, Y_test
 
 #Neural Networks (MLP)
 from sklearn.neural_network import MLPClassifier
