@@ -1,17 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 23 14:18:23 2017
-
-@author: freeze
-"""
-
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
-from final_data import X_train, X_test, Y_train, Y_test
+from prepared_data import X_train, X_test, Y_train, Y_test
 
 #Support Vector Machine
 from sklearn import svm
