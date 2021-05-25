@@ -1,17 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 18 18:02:26 2020
-
-@author: Pariya
-"""
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
-
-
-from final_data import X_train, X_test, Y_train, Y_test
+from prepared_data import X_train, X_test, Y_train, Y_test
 
 #Naive Bayes
 from sklearn.naive_bayes import GaussianNB
