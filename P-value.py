@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 25 21:41:15 2021
-
-@author: Pariya
-"""
-
 #from final_data import X_train, X_test, Y_train, Y_test
 from scipy import stats
 from NB import Y_pred as NB
