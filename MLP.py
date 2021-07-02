@@ -13,7 +13,7 @@ pickle.dump(MLP, open(filename, 'wb'))
 
 #Confusion Matrix
 cm = confusion_matrix(Y_test, Y_pred)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=DT.classes_)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=MLP.classes_)
 disp.plot(cmap="Blues")
 
 TN = int(cm[0][0]) #true negatives
