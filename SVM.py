@@ -1,8 +1,4 @@
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import f1_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, accuracy_score, precision_score, recall_score, f1_score , matthews_corrcoef
 from prepared_data import X_train, X_test, Y_train, Y_test
 
 #Support Vector Machine
