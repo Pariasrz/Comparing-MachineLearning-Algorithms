@@ -4,7 +4,7 @@ from prepared_data import X_train, X_test, Y_train, Y_test
 
 #Neural Networks (MLP)
 from sklearn.neural_network import MLPClassifier
-MLP = MLPClassifier(random_state=1, max_iter=400).fit(X_train, Y_train)
+MLP = MLPClassifier(random_state=0, max_iter=600).fit(X_train, Y_train)
 Y_pred = MLP.predict(X_test)
 
 #save model
@@ -23,9 +23,9 @@ FP = int(cm[0][1]) #false positives
 print("\nMLP")
 print('Confusion Matrix:' , cm)
 print('Accuracy: ', accuracy_score(Y_test, Y_pred)*100)
-print('Precision: ' , precision_score(Y_test, Y_pred, average='binary')*100)
-print('Recall: ', recall_score(Y_test, Y_pred, average='binary')*100)
-print('F-score: ' ,(f1_score(Y_test, Y_pred, average='binary')*100))
+print('Precision: ' , precision_score(Y_test, Y_pred)*100)
+print('Recall: ', recall_score(Y_test, Y_pred)*100)
+print('F-score: ' ,(f1_score(Y_test, Y_pred')*100))
 print('Specificity: ', (float(TN/(TN+FP)))*100)
 print('MCC: ', (matthews_corrcoef(Y_test, Y_pred))*100)
 
