@@ -9,7 +9,7 @@ Y_pred = KNN.predict(X_test)
 
 #Confusion Matrix
 cm = confusion_matrix(Y_test, Y_pred)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=DT.classes_)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=KNN.classes_)
 disp.plot(cmap="Blues")
 
 TN = int(cm[0][0]) #true negatives
@@ -23,4 +23,4 @@ print('Precision: ' , precision_score(Y_test, Y_pred, average='binary')*100)
 print('Recall: ', recall_score(Y_test, Y_pred, average='binary')*100)
 print('F-score: ' ,(f1_score(Y_test, Y_pred, average='binary')*100))
 print('Specificity: ', (float(TN/(TN+FP)))*100)
-print('MCC: ', (matthews_corrcoef(Y_test, Y_pred_1))*100)
+print('MCC: ', (matthews_corrcoef(Y_test, Y_pred))*100)
