@@ -19,9 +19,9 @@ FP = int(cm[0][1])
 print("\nDecisionTree")
 print('Confusion Matrix:' , cm)
 print('Accuracy: ', accuracy_score(Y_test, Y_pred_1)*100)
-print('Precision: ' , precision_score(Y_test, Y_pred_1, average='binary')*100)
-print('Recall: ', recall_score(Y_test, Y_pred_1, average='binary')*100)
-print('F-score: ' ,(f1_score(Y_test, Y_pred_1, average='binary')*100))
+print('Precision: ' , precision_score(Y_test, Y_pred_1)*100)
+print('Recall: ', recall_score(Y_test, Y_pred_1)*100)
+print('F-score: ' ,(f1_score(Y_test, Y_pred_1)*100))
 print('Specificity: ', (float(TN/(TN+FP)))*100)
 print('MCC: ', (matthews_corrcoef(Y_test, Y_pred_1))*100)
 
@@ -34,7 +34,7 @@ Y_pred_2 = RF.predict(X_test)
 
 #Confusion Matrix
 cm = confusion_matrix(Y_test, Y_pred_2)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=DT.classes_)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=RF.classes_)
 disp.plot(cmap="Blues")
 
 TN = int(cm[0][0]) #true negatives
@@ -44,10 +44,10 @@ FP = int(cm[0][1]) #false positives
 print("\nRandom Forest")
 print('Confusion Matrix:' , cm)
 print('Accuracy: ', accuracy_score(Y_test, Y_pred_2)*100)
-print('Precision: ' , precision_score(Y_test, Y_pred_2, average='binary')*100)
-print('Recall: ', recall_score(Y_test, Y_pred_2, average='binary')*100)
-print('F-score: ' ,(f1_score(Y_test, Y_pred_2, average='binary')*100))
+print('Precision: ' , precision_score(Y_test, Y_pred_2)*100)
+print('Recall: ', recall_score(Y_test, Y_pred_2)*100)
+print('F-score: ' ,(f1_score(Y_test, Y_pred_2)*100))
 print('Specificity: ', (float(TN/(TN+FP)))*100)
-print('MCC: ', (matthews_corrcoef(Y_test, Y_pred_1))*100)
+print('MCC: ', (matthews_corrcoef(Y_test, Y_pred_2))*100)
 
 
